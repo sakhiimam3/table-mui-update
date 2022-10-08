@@ -1,3 +1,25 @@
-.App {
-  /* text-align: center; */
+.table_App {
+  padding: 50px;
+  color: white;
+  position: relative;
+}
+.Component-horizontalScrollContainer-16 {
+  z-index: 0;
+}
+.modal-popup {
+  display: flex;
+  justify-content: end;
+}
+.modal-popup button {
+  border: none;
+  width: max-content;
+  padding: 10px;
+  background: #2f2f2f;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.modal-popup button:hover {
+  background-color: rgb(77, 7, 7);
 }
