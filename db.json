@@ -1,28 +1,8 @@
 {
   "table": [
     {
-      "id": 1,
-      "name": "sakhi",
-      "email": "sak@gmail.com",
-      "phone": "0310  211333",
-      "address": "sakhidad garden sharaf",
-      "city": "lahore"
-    },
-    {
-      "id": 2,
-      "name": "noor",
-      "email": "noor@gmail.com",
-      "phone": "0310  211333",
-      "address": "sakhidad garden sharaf",
-      "city": "punjab"
-    },
-    {
-      "id": 3,
-      "name": "json-server",
-      "email": "baba3411@gmail.com",
-      "phone": "0310  211333",
-      "address": "noor garden sharaf",
-      "city": "islamabad"
+      "city": "asdas",
+      "id": 1
     }
   ]
 }

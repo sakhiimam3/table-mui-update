@@ -55,7 +55,7 @@ function Table() {
 
     const columns = [
         { title: "Id", field: "id", },
-        { title: "Name", field: "name", sorting: true, filterPlaceholder: "filter by Name", cellStyle: { background: "#E6A496 " }, headerStyle: { color: "white" }, sorting: true },
+        { title: "Name", field: "name", sorting: true, filterPlaceholder: "filter by Name", cellStyle: { background: "rgb(56 56 56) " }, headerStyle: { color: "white" }, sorting: true },
         { title: "Email", field: "email", filterPlaceholder: "filter by email", sorting: true },
         { title: "Phone Number", field: "phone", filterPlaceholder: "filter by ph:no", align: "center", grouping: false, sorting: true },
         { title: "Address", field: "address", filterPlaceholder: "filter by address", sorting: true },
@@ -93,14 +93,7 @@ function Table() {
 
                     })
                 }}
-                actions={[
 
-                    {
-                        icon: () => <Delete style={{ color: 'red' }} />,
-                        tooltip: "Delete All",
-                        onClick: () => handlDeleteAll(),
-                    }
-                ]}
                 onSelectionChange={(selectedRows) => console.log(selectedRows)}
                 options={{
                     sorting: true, search: true,
@@ -109,12 +102,10 @@ function Table() {
                     paginationType: "stepped", showFirstLastPageButtons: false, paginationPosition: "bottom", exportButton: true,
                     exportAllData: true, exportFileName: "TableData", addRowPosition: "first", actionsColumnIndex: -1, selection: true,
                     showSelectAllCheckbox: false, showTextRowsSelected: true, selectionProps: rowData => ({
-                        // disabled: rowData.age == null,
-                        // color:"primary"
                     }),
                     columnsButton: true,
-                    rowStyle: (data, index) => index % 2 === 0 ? { background: "#f5f5f5" } : null,
-                    headerStyle: { background: "#f44336", color: "#fff" }
+                    rowStyle: (data, index) => index % 2 === 0 ? { background: "rgb(50 48 48)", color: 'white' } : null,
+                    headerStyle: { backgroundColor: "rgb(50 48 48)", color: "#fff" }
                 }}
                 title="Student Information"
                 icons={{ Add: () => <AddIcon /> }} />
