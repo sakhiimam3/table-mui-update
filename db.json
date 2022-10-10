@@ -1,8 +1,36 @@
 {
   "table": [
     {
-      "city": "asdas",
-      "id": 1
+      "name": "sikander ",
+      "email": "sikander@gmail.com",
+      "phone": "03332113411",
+      "address": "lahore  , pakistan ",
+      "city": "lahore",
+      "id": 4
+    },
+    {
+      "name": "rizwan",
+      "email": "gazi@gmail.com",
+      "phone": "22113411",
+      "address": "karach bandarga",
+      "city": "dehli",
+      "id": 5
+    },
+    {
+      "name": "shoaib",
+      "email": "shoaib@gmail.com",
+      "phone": "000000",
+      "address": "saddar",
+      "city": "karachi",
+      "id": 6
+    },
+    {
+      "name": "ali",
+      "email": "ali1234@gmail.com",
+      "phone": "03122322",
+      "address": "12312323",
+      "city": "karachi",
+      "id": 7
     }
   ]
 }

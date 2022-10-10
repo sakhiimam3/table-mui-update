@@ -56,13 +56,13 @@ export function TableallData() {
 
 // add todo
 
-export function addTables(inputField) {
-  console.log(inputField, "<<");
+export function addTables(name,email,phone,address,city) {
+
   return async (dispatch) => {
     try {
       await fetch("http://localhost:3004/table", {
         method: "POST",
-        body: JSON.stringify(inputField),
+        body: JSON.stringify(name,email,phone,address,city),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },

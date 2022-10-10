@@ -2,32 +2,17 @@ import React, { useState, useEffect } from 'react';
 
 import MaterialTable from 'material-table'
 import AddIcon from '@material-ui/icons/Add';
-import { Button, Checkbox } from '@material-ui/core';
-import { Delete, MoreVert } from '@material-ui/icons';
+import { Checkbox } from '@material-ui/core';
 import { useDispatch, useSelector } from "react-redux";
-import { TableSelector, TableallData, deleteTable, updateTable } from "./TableSlice"
-import FormModal from '../components/formModal';
+import { TableSelector, TableallData, deleteTable, updateTable } from "../features/TableSlice"
 import TableModal from '../components/formModal';
-const data = [
-    { name: "Raj", email: "Raj@gmail.com", phone: 7894561230, age: null, gender: "M", city: "Chennai", fee: 78456 },
-    { name: "Mohan", email: "mohan@gmail.com", phone: 7845621590, age: 35, gender: "M", city: "Delhi", fee: 456125 },
-    { name: "Sweety", email: "sweety@gmail.com", phone: 741852912, age: 17, gender: "F", city: "Noida", fee: 458796 },
-    { name: "Vikas", email: "vikas@gmail.com", phone: 9876543210, age: 20, gender: "M", city: "Mumbai", fee: 874569 },
-    { name: "Neha", email: "neha@gmail.com", phone: 7845621301, age: 25, gender: "F", city: "Patna", fee: 748521 },
-    { name: "Mohan", email: "mohan@gmail.com", phone: 7845621590, age: 35, gender: "M", city: "Delhi", fee: 456125 },
-    { name: "Sweety", email: "sweety@gmail.com", phone: 741852912, age: 17, gender: "F", city: "Noida", fee: 458796 },
-    { name: "Vikas", email: "vikas@gmail.com", phone: 9876543210, age: 20, gender: "M", city: "Mumbai", fee: 874569 },
-    { name: "Raj", email: "Raj@gmail.com", phone: 7894561230, age: null, gender: "M", city: "Chennai", fee: 78456 },
-    { name: "Mohan", email: "mohan@gmail.com", phone: 7845621590, age: 35, gender: "M", city: "Delhi", fee: 456125 },
-    { name: "Sweety", email: "sweety@gmail.com", phone: 741852912, age: 17, gender: "F", city: "Noida", fee: 458796 },
-    { name: "Vikas", email: "vikas@gmail.com", phone: 9876543210, age: 20, gender: "M", city: "Mumbai", fee: 874569 },
-]
 
 
 function Table() {
     const dispatch = useDispatch()
     const { tableList } = useSelector(TableSelector)
     const [filter, setFilter] = useState(null)
+    
     // handle filter button 
     const handleCheckBox = () => {
         setFilter(true)
@@ -44,11 +29,6 @@ function Table() {
 
 
     }, [])
-
-    // handle delete all 
-    const handlDeleteAll = () => {
-        alert("")
-    }
 
 
     const data = tableList.map(item => ({ ...item }))
@@ -104,7 +84,8 @@ function Table() {
                     showSelectAllCheckbox: false, showTextRowsSelected: true, selectionProps: rowData => ({
                     }),
                     columnsButton: true,
-                    rowStyle: (data, index) => index % 2 === 0 ? { background: "rgb(50 48 48)", color: 'white' } : null,
+                    rowStyle: (data, index) => index % 2 === 0 ? { background: "rgb(50 48 48)", color: 'white' }
+                        : { color: "white" },
                     headerStyle: { backgroundColor: "rgb(50 48 48)", color: "#fff" }
                 }}
                 title="Student Information"
